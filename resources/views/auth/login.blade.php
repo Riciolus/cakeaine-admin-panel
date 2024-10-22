@@ -9,12 +9,29 @@
 
 <body class="max-h-screen bg-neutral-900 overflow-hidden antialiased">
 
+    <div class="flex flex-col justify-center items-center overflow-hidden h-svh ">
 
-    <div class="relative h-screen ">
+        {{-- Navigation Bar --}}
         @include('layouts.navbar')
+
+
         <div class="flex justify-center items-center h-full bg-neutral-900 text-neutral-50">
             {{-- Card --}}
-            <div class="relative px-16 py-12 bg-neutral-900 border border-neutral-700 rounded-lg overflow-hidden">
+            <div
+                class="relative flex flex-col justify-center items-center px-16 py-12 bg-neutral-900 h-full sm:h-fit sm:border border-neutral-700 rounded-lg overflow-hidden">
+
+                {{-- Icon Particles --}}
+                <div>
+                    <img src="{{ asset('images/cookie_3d.png') }}" alt="ice-cream"
+                        class="absolute w-12 top-8 left-9 -rotate-12 z-20 opacity-60">
+
+                    <img src="{{ asset('images/shortcake_3d.png') }}" alt="ice-cream"
+                        class="absolute w-20 opacity-35 top-[20%] right-10 -rotate-3 z-10">
+
+                    <img src="{{ asset('images/birthday_cake_3d.png') }}" alt="ice-cream"
+                        class="absolute w-44 -bottom-5 -left-6 opacity-25 rotate-12 z-10">
+                </div>
+
                 {{-- Background Gradients --}}
                 <div
                     class="absolute bg-gradient-to-l from-rose-200 to-amber-100 w-[33%] h-[25%] rounded-full blur-[82px]  top-0 right-0">
@@ -48,15 +65,14 @@
 
                     </div>
                     {{-- Button Field --}}
-                    <div class="flex justify-center mt-8">
+                    <div class="relative flex justify-center mt-8">
                         <button
-                            class="py-2 rounded-md w-full bg-neutral-700 z-10 font-semibold hover:bg-neutral-900/70 border border-neutral-600 transition-colors">Sign
-                            Up</button>
+                            class="py-2 rounded-md w-full bg-neutral-700 z-10 font-semibold hover:bg-neutral-800 border border-neutral-600 transition-colors">Sign
+                            In</button>
                     </div>
                 </form>
             </div>
         </div>
-    </div>
 </body>
 
 
