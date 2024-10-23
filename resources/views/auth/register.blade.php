@@ -22,13 +22,13 @@
 
                 {{-- Icon Particles --}}
                 <div class="">
-                    <img src="{{ asset('images/cupcake_3d.png') }}" alt="ice-cream"
+                    <img src="/static/images/cupcake_3d.png" alt="ice-cream"
                         class="absolute w-12 top-16 left-9 -rotate-12 z-20 opacity-60">
 
-                    <img src="{{ asset('images/shortcake_3d.png') }}" alt="ice-cream"
+                    <img src="/static/images/shortcake_3d.png" alt="ice-cream"
                         class="absolute w-20 opacity-35 top-[20%] right-14 -rotate-6 z-10">
 
-                    <img src="{{ asset('images/birthday_cake_3d.png') }}" alt="ice-cream"
+                    <img src="/static/images/birthday_cake_3d.png" alt="ice-cream"
                         class="absolute w-44 bottom-[10%] left-0 opacity-25 rotate-12 z-10">
                 </div>
 
@@ -48,7 +48,8 @@
                 </div>
 
                 {{-- Form --}}
-                <form action="">
+                <form method="POST" action="{{ route('handleRegister') }}">
+                    @csrf
                     {{-- Input Field --}}
                     <div class="flex flex-col gap-2 mt-10 z-10">
                         <div class="flex flex-col gap-1.5 z-10">
@@ -74,11 +75,11 @@
                     </div>
                     {{-- Button Field --}}
                     <div class="relative flex justify-center mt-8">
-                        <button
+                        <button type="submit"
                             class="py-2 rounded-md w-full bg-neutral-700 z-10 font-semibold hover:bg-neutral-800 border border-neutral-600 transition-colors">Sign
                             Up</button>
                         {{-- Particle --}}
-                        <img src="{{ asset('/images/ice_cream_3d.png') }}" alt="ice-cream"
+                        <img src="/static/images/ice_cream_3d.png" alt="ice-cream"
                             class="absolute w-14 bottom-5 -right-7 rotate-12 z-20 opacity-80">
                     </div>
                 </form>

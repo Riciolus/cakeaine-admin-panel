@@ -22,13 +22,13 @@
 
                 {{-- Icon Particles --}}
                 <div>
-                    <img src="{{ asset('images/cookie_3d.png') }}" alt="ice-cream"
+                    <img src="{{ asset('static/images/cookie_3d.png') }}" alt="ice-cream"
                         class="absolute w-12 top-8 left-9 -rotate-12 z-20 opacity-60">
 
-                    <img src="{{ asset('images/shortcake_3d.png') }}" alt="ice-cream"
+                    <img src="{{ asset('static/images/shortcake_3d.png') }}" alt="ice-cream"
                         class="absolute w-20 opacity-35 top-[20%] right-10 -rotate-3 z-10">
 
-                    <img src="{{ asset('images/birthday_cake_3d.png') }}" alt="ice-cream"
+                    <img src="{{ asset('static/images/birthday_cake_3d.png') }}" alt="ice-cream"
                         class="absolute w-44 -bottom-5 -left-6 opacity-25 rotate-12 z-10">
                 </div>
 
@@ -48,7 +48,8 @@
                 </div>
 
                 {{-- Form --}}
-                <form action="">
+                <form method="POST" action="{{ route('handleLogin') }}">
+                    @csrf
                     {{-- Input Field --}}
                     <div class="flex flex-col gap-2 mt-10 z-10">
 
